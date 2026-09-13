@@ -106,6 +106,9 @@ This ensures that anatomical structures (the optic disc, blood vessels, lesion r
 
 After radius scaling, images were placed onto a square canvas with a neutral grey (128) background. This step preserves the original proportions of the retina — avoiding the distortion that direct rectangular-to-square resizing would introduce — while producing a uniform square input size ready for the neural network.
 
+![image](images/5.png)
+
+
 - **Stage IV — Ben Graham Contrast Enhancement**
 
 The dataset included images with varying visual quality — haze, uneven illumination, and colour inconsistencies that make subtle features like microaneurysms and small haemorrhages difficult to see. Ben Graham's contrast enhancement method was applied:
@@ -117,6 +120,9 @@ This subtracts a blurred version of the image from the original, which effective
 - **Stage V — Circular Masking**
 
 After contrast enhancement, some edge artifacts became more pronounced at the image borders. A circular mask was applied to retain only the central retinal region while filling the outer areas with a neutral grey background. This ensures the model attends exclusively to clinically relevant regions and is not confused by processing artifacts at the image edges.
+
+![image](images/6.png)
+
 
 Preprocessing progression:
 
