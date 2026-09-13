@@ -48,6 +48,9 @@ The low symmetry in Grade 1 is clinically meaningful — it suggests that mild D
 
 Methodological implication: The high inter-eye correlation (87.25%) meant that naive random splitting of images into train and test sets would cause data leakage — a patient's left eye image could appear in training while their right eye appears in testing. This was addressed through patient-level data splitting, described in the preprocessing section below.
 
+![image](images/2.png)
+
+
 **III. Brightness Distribution by Class**
 
 The brightness analysis examined whether DR severity correlates with image brightness — which would suggest that disease progression affects how images are captured or appear visually.
@@ -59,6 +62,9 @@ Key findings:
 - There is wide within-class brightness variation across all grades, reflecting the diverse imaging conditions under which the dataset was collected
 
 The consistent brightness across grades confirms that the model cannot rely on overall image brightness as a shortcut for grading — it must learn actual pathological features. The wide brightness variation motivated the inclusion of colour jitter augmentation (±0.2 brightness and contrast) to make both models robust to these real-world imaging inconsistencies.
+
+![image](images/3.png)
+
 
 **IV. Image Resolution and Shape Analysis**
 
@@ -73,6 +79,9 @@ Key findings:
 - Very large images carry more detail but are computationally expensive to process
 
 These findings made it clear that a structured normalisation pipeline was essential — directly resizing the raw rectangular images to a square input format would introduce distortion, and the large resolution variation would make lesion sizes inconsistent between images even within the same DR grade.
+
+![image](images/4.png)
+
 
 ### Data Preprocessing
 
