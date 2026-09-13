@@ -30,6 +30,9 @@ The first and most critical finding from the EDA is the severe class imbalance i
 
 This imbalance is not just a statistical concern — it has direct clinical implications. A model that ignores the imbalance would learn to predict healthy for most images and achieve superficially high accuracy while failing to detect the disease cases that matter most. This finding motivated the use of weighted sampling, Focal Loss, and Mixup augmentation in both models.
 
+![image](images/1.png)
+
+
 **II. Symmetry Analysis — Left vs. Right Eye**
 
 Since each patient contributes both a left and right eye image, it was important to understand how consistent DR severity grades are between the two eyes. This has two implications — clinical and methodological.
