@@ -4,6 +4,10 @@
 
 # Diabetic Retinopathy Severity Grading: Custom CNN vs. Transfer Learning
 
+
+**Medium Article:** [Automated Diabetic Retinopathy Grading with Deep Learning: A Complete Pipeline](https://medium.com/@chooladevapiyasiri/automated-diabetic-retinopathy-grading-with-deep-learning-a-complete-pipeline-4768b998a650)
+
+
 ## Exploratory Data Analysis & Preprocessing
 
 Before any model was built, a thorough Exploratory Data Analysis (EDA) was conducted to understand the structure, quality, and challenges of the dataset. The findings directly shaped the preprocessing pipeline and model design decisions that followed. This document summarises the key observations from the EDA and the preprocessing steps applied to prepare the data for training.Dataset DescriptionThe dataset consists of high-resolution retinal fundus photographs collected under varying imaging conditions. Each patient contributes two images — one for the left eye and one for the right eye — with filenames in the format {patient_id}_left.jpeg and {patient_id}_right.jpeg. Each image has been clinically graded on a five-level diabetic retinopathy severity scale:
